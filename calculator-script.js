@@ -26,7 +26,7 @@ class Calculator extends React.Component {
                         <div id="eight">8</div>
                         <div id="nine">9</div>
                         <div id="add">+</div>
-                        <div id="substract">-</div>
+                        <div id="subtract">-</div>
                         <div id="multiply">X</div>
                         <div id="divide">/</div>
                         <div id="decimal">.</div>

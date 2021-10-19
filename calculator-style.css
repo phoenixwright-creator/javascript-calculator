@@ -80,7 +80,7 @@
     justify-content: center;
 }
 
-#substract {
+#subtract {
     grid-area: substract;
     border: 1px solid black;
     display: flex;
