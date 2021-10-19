@@ -1,0 +1,193 @@
+#container {
+    background-color: aqua;
+}
+
+#presentation {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: center;
+}
+
+#main {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+#calculator {
+    background-color: beige;
+    display: grid;
+    grid-template-rows: repeat(6, 75px);
+    grid-template-columns: repeat(4, 75px);
+    grid-template-areas:
+        "display display display display"
+        "clear clear divide multiply"
+        "seven eight nine substract"
+        "four five six add"
+        "one two three equals"
+        "zero zero decimal equals";
+        border: 1px solid black;
+    text-align: center;
+    font-size: 18px;
+}
+
+#display {
+    grid-area: display;
+    display: flex;
+    flex-direction: column;
+}
+
+#formula {
+    border: 1px solid black;
+    height: 36px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+}
+
+#total {
+    border: 1px solid black;
+    height: 35px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+}
+
+#equals {
+    grid-area: equals;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#clear {
+    grid-area: clear;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#add {
+    grid-area: add;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#substract {
+    grid-area: substract;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#divide {
+    grid-area: divide;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#multiply {
+    grid-area: multiply;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#decimal {
+    grid-area: decimal;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#zero {
+    grid-area: zero;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#one {
+    grid-area: one;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#two {
+    grid-area: two;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#three {
+    grid-area: three;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#four {
+    grid-area: four;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#five {
+    grid-area: five;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#six {
+    grid-area: six;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#seven {
+    grid-area: seven;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#eight {
+    grid-area: eight;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#nine {
+    grid-area: nine;
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
