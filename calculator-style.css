@@ -36,10 +36,10 @@
     grid-area: display;
     display: flex;
     flex-direction: column;
+    border: 1px solid black;
 }
 
 #formula {
-    border: 1px solid black;
     height: 36px;
     display: flex;
     justify-content: flex-end;
@@ -47,8 +47,8 @@
     padding-right: 10px;
 }
 
-#total {
-    border: 1px solid black;
+#input {
+    
     height: 35px;
     display: flex;
     justify-content: flex-end;
