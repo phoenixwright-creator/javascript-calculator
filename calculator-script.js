@@ -7,11 +7,13 @@ class Calculator extends React.Component {
             total: 0,
             input: "",
             formula: "",
-            calc: []
+            calc: [],
+            decimal: false
         };
         this.handleClick = this.handleClick.bind(this);
     }
     handleClick(event){
+        
         switch(event.target.id){
             case "zero":
                 this.setState({
@@ -74,37 +76,47 @@ class Calculator extends React.Component {
                 });
                 break;
             case "decimal":
-               
+                if(this.state.decimal === false) {
+                    this.setState({
+                        input: this.state.input + event.target.innerHTML,
+                        formula: this.state.formula + event.target.innerHTML,
+                        decimal: true
+                    });
+                }
+                else {
+                    console.log("You cannot use more than one decimal separator");
+                }
+                break;
             case "add":
-                this.state.calc.push(parseInt(this.state.input));
+                this.state.calc.push(Number(this.state.input));
                 this.state.calc.push("+");
                 this.state.formula += "+";
                 this.state.input = "";
-                
+                this.state.decimal = false;
                 break;
             case "subtract":
-                this.state.calc.push(parseInt(this.state.input));
+                this.state.calc.push(Number(this.state.input));
                 this.state.calc.push("-");
                 this.state.formula += "-";
                 this.state.input = "";
-                
+                this.state.decimal = false;
                 break;
             case "multiply":
-                this.state.calc.push(parseInt(this.state.input));
+                this.state.calc.push(Number(this.state.input));
                 this.state.calc.push("*");
                 this.state.formula += "*";
                 this.state.input = "";
-                
+                this.state.decimal = false;
                 break;
             case "divide":
-                this.state.calc.push(parseInt(this.state.input));
+                this.state.calc.push(Number(this.state.input));
                 this.state.calc.push("/");
                 this.state.formula += "/";
                 this.state.input = "";
-                
+                this.state.decimal = false;
                 break;
             case "equals":
-                this.state.calc.push(parseInt(this.state.input));
+                this.state.calc.push(Number(this.state.input));
                 console.log(this.state.calc);
                 for(let i=0; i<this.state.calc.length; i++){
                     if(this.state.calc[i]==="*"){
@@ -130,12 +142,27 @@ class Calculator extends React.Component {
                         i=0;
                     }
                 }
+                if(this.state.decimal===true){
+                    this.state.total = this.state.total.toFixed(4);
+                }
+                this.setState({
+                    input: this.state.total
+                })
                 console.log(this.state.total);
-;               break;
+                break;
+            case "clear":
+                this.setState({
+                    total: 0,
+                input: "",
+                formula: "",
+                calc: [],
+                decimal: false
+                });
+                break;
         }
     }
+
     render() {
-    
         return (
             <div>
                 <h1 id="presentation">Welcome to the Javascript Calculator</h1>

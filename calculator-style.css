@@ -35,25 +35,7 @@
 #display {
     grid-area: display;
     display: flex;
-    flex-direction: column;
     border: 1px solid black;
-}
-
-#formula {
-    height: 36px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 10px;
-}
-
-#input {
-    
-    height: 35px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-right: 10px;
 }
 
 #equals {
