@@ -6,197 +6,132 @@ class Calculator extends React.Component {
         this.state = {
             total: 0,
             input: "",
-            formula: ""
+            formula: "",
+            calc: []
         };
         this.handleClick = this.handleClick.bind(this);
     }
     handleClick(event){
-        console.log(event.target.innerHTML);
         switch(event.target.id){
             case "zero":
-                if(this.state.input==="+"||this.state.input==="-"||this.state.input==="X"||this.state.input==="/"){
-                    this.setState({
-                        input: event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
-                else {
-                    this.setState({
-                        input: this.state.input + event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
+                this.setState({
+                    input: this.state.input + event.target.innerHTML,
+                    formula: this.state.formula + event.target.innerHTML
+                });
                 break;
             case "one":
-                if(this.state.input==="+"||this.state.input==="-"||this.state.input==="X"||this.state.input==="/"){
-                    this.setState({
-                        input: event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
-                else {
-                    this.setState({
-                        input: this.state.input + event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
+                this.setState({
+                    input: this.state.input + event.target.innerHTML,
+                    formula: this.state.formula + event.target.innerHTML
+                });
                 break;
             case "two":
-                if(this.state.input==="+"||this.state.input==="-"||this.state.input==="X"||this.state.input==="/"){
-                    this.setState({
-                        input: event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
-                else {
-                    this.setState({
-                        input: this.state.input + event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
+                this.setState({
+                    input: this.state.input + event.target.innerHTML,
+                    formula: this.state.formula + event.target.innerHTML
+                });
                 break;
             case "three":
-                if(this.state.input==="+"||this.state.input==="-"||this.state.input==="X"||this.state.input==="/"){
-                    this.setState({
-                        input: event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
-                else {
-                    this.setState({
-                        input: this.state.input + event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
+                this.setState({
+                    input: this.state.input + event.target.innerHTML,
+                    formula: this.state.formula + event.target.innerHTML
+                });
                 break;
             case "four":
-                if(this.state.input==="+"||this.state.input==="-"||this.state.input==="X"||this.state.input==="/"){
-                    this.setState({
-                        input: event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
-                else {
-                    this.setState({
-                        input: this.state.input + event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
+                this.setState({
+                    input: this.state.input + event.target.innerHTML,
+                    formula: this.state.formula + event.target.innerHTML
+                });
                 break;
             case "five":
-                if(this.state.input==="+"||this.state.input==="-"||this.state.input==="X"||this.state.input==="/"){
-                    this.setState({
-                        input: event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
-                else {
-                    this.setState({
-                        input: this.state.input + event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
+                this.setState({
+                    input: this.state.input + event.target.innerHTML,
+                    formula: this.state.formula + event.target.innerHTML
+                });
                 break;
             case "six":
-                if(this.state.input==="+"||this.state.input==="-"||this.state.input==="X"||this.state.input==="/"){
-                    this.setState({
-                        input: event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
-                else {
-                    this.setState({
-                        input: this.state.input + event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
+                this.setState({
+                    input: this.state.input + event.target.innerHTML,
+                    formula: this.state.formula + event.target.innerHTML
+                });
                 break;
             case "seven":
-                if(this.state.input==="+"||this.state.input==="-"||this.state.input==="X"||this.state.input==="/"){
-                    this.setState({
-                        input: event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
-                else {
-                    this.setState({
-                        input: this.state.input + event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
+                this.setState({
+                    input: this.state.input + event.target.innerHTML,
+                    formula: this.state.formula + event.target.innerHTML
+                });
                 break;
             case "eight":
-                if(this.state.input==="+"||this.state.input==="-"||this.state.input==="X"||this.state.input==="/"){
-                    this.setState({
-                        input: event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
-                else {
-                    this.setState({
-                        input: this.state.input + event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
+                this.setState({
+                    input: this.state.input + event.target.innerHTML,
+                    formula: this.state.formula + event.target.innerHTML
+                });
                 break;
             case "nine":
-                if(this.state.input==="+"||this.state.input==="-"||this.state.input==="X"||this.state.input==="/"){
-                    this.setState({
-                        input: event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
-                else {
-                    this.setState({
-                        input: this.state.input + event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
+                this.setState({
+                    input: this.state.input + event.target.innerHTML,
+                    formula: this.state.formula + event.target.innerHTML
+                });
                 break;
             case "decimal":
-                if(this.state.input==="+"||this.state.input==="-"||this.state.input==="X"||this.state.input==="/"){
-                    this.setState({
-                        input: event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
-                else {
-                    this.setState({
-                        input: this.state.input + event.target.innerHTML,
-                        formula: this.state.formula + event.target.innerHTML
-                    });
-                }
-                break;
+               
             case "add":
-                this.setState({
-                    input: "+",
-                    formula: this.state.formula + "+"
-                });
+                this.state.calc.push(parseInt(this.state.input));
+                this.state.calc.push("+");
+                this.state.formula += "+";
+                this.state.input = "";
+                
                 break;
             case "subtract":
-                this.setState({
-                    input: "-",
-                    formula: this.state.formula + "-"
-                });
+                this.state.calc.push(parseInt(this.state.input));
+                this.state.calc.push("-");
+                this.state.formula += "-";
+                this.state.input = "";
+                
                 break;
             case "multiply":
-                this.setState({
-                    input: "X",
-                    formula: this.state.formula + "*"
-                });
+                this.state.calc.push(parseInt(this.state.input));
+                this.state.calc.push("*");
+                this.state.formula += "*";
+                this.state.input = "";
+                
                 break;
             case "divide":
-                this.setState({
-                    input: "/",
-                    formula: this.state.formula + "/"
-                });
+                this.state.calc.push(parseInt(this.state.input));
+                this.state.calc.push("/");
+                this.state.formula += "/";
+                this.state.input = "";
+                
                 break;
             case "equals":
-                this.setState({
-                    total: parseInt(this.state.formula),
-                });
-                console.log(Number("5+7"));
-;                break;
+                this.state.calc.push(parseInt(this.state.input));
+                console.log(this.state.calc);
+                for(let i=0; i<this.state.calc.length; i++){
+                    if(this.state.calc[i]==="*"){
+                        this.state.total = this.state.calc[i-1] * this.state.calc[i+1];
+                        this.state.calc.splice(i-1, 3, this.state.total);
+                        i=0;
+                    }
+                    else if(this.state.calc[i]==="/"){
+                        this.state.total = this.state.calc[i-1] / this.state.calc[i+1];
+                        this.state.calc.splice(i-1, 3, this.state.total);
+                        i=0;
+                    }
+                }
+                for(let i=0; i<this.state.calc.length; i++){
+                    if(this.state.calc[i]==="+"){
+                        this.state.total = this.state.calc[i-1] + this.state.calc[i+1];
+                        this.state.calc.splice(i-1, 3, this.state.total);
+                        i=0;
+                    }
+                    else if(this.state.calc[i]==="-"){
+                        this.state.total = this.state.calc[i-1] - this.state.calc[i+1];
+                        this.state.calc.splice(i-1, 3, this.state.total);
+                        i=0;
+                    }
+                }
+                console.log(this.state.total);
+;               break;
         }
     }
     render() {
