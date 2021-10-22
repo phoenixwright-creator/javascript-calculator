@@ -5,7 +5,7 @@ class Calculator extends React.Component {
         super(props);
         this.state = {
             total: 0,
-            input: "",
+            input: "0",
             formula: "",
             calc: [],
             decimal: false
@@ -16,64 +16,144 @@ class Calculator extends React.Component {
         
         switch(event.target.id){
             case "zero":
-                this.setState({
-                    input: this.state.input + event.target.innerHTML,
-                    formula: this.state.formula + event.target.innerHTML
-                });
+                if(this.state.input === "0"){
+                    this.setState({
+                        input: "0",
+                        formula: "0"
+                    });
+                }
+                else {
+                    this.setState({
+                        input: this.state.input + event.target.innerHTML,
+                        formula: this.state.formula + event.target.innerHTML
+                    });
+                }
                 break;
             case "one":
-                this.setState({
-                    input: this.state.input + event.target.innerHTML,
-                    formula: this.state.formula + event.target.innerHTML
-                });
+                if(this.state.input === "0"){
+                    this.setState({
+                        input: event.target.innerHTML,
+                        formula: event.target.innerHTML
+                    });
+                }
+                else {
+                    this.setState({
+                        input: this.state.input + event.target.innerHTML,
+                        formula: this.state.formula + event.target.innerHTML
+                    });
+                }
                 break;
             case "two":
-                this.setState({
-                    input: this.state.input + event.target.innerHTML,
-                    formula: this.state.formula + event.target.innerHTML
-                });
+                if(this.state.input === "0"){
+                    this.setState({
+                        input: event.target.innerHTML,
+                        formula: event.target.innerHTML
+                    });
+                }
+                else {
+                    this.setState({
+                        input: this.state.input + event.target.innerHTML,
+                        formula: this.state.formula + event.target.innerHTML
+                    });
+                }
                 break;
             case "three":
-                this.setState({
-                    input: this.state.input + event.target.innerHTML,
-                    formula: this.state.formula + event.target.innerHTML
-                });
+                if(this.state.input === "0"){
+                    this.setState({
+                        input: event.target.innerHTML,
+                        formula: event.target.innerHTML
+                    });
+                }
+                else {
+                    this.setState({
+                        input: this.state.input + event.target.innerHTML,
+                        formula: this.state.formula + event.target.innerHTML
+                    });
+                }
                 break;
             case "four":
-                this.setState({
-                    input: this.state.input + event.target.innerHTML,
-                    formula: this.state.formula + event.target.innerHTML
-                });
+                if(this.state.input === "0"){
+                    this.setState({
+                        input: event.target.innerHTML,
+                        formula: event.target.innerHTML
+                    });
+                }
+                else {
+                    this.setState({
+                        input: this.state.input + event.target.innerHTML,
+                        formula: this.state.formula + event.target.innerHTML
+                    });
+                }
                 break;
             case "five":
-                this.setState({
-                    input: this.state.input + event.target.innerHTML,
-                    formula: this.state.formula + event.target.innerHTML
-                });
+                if(this.state.input === "0"){
+                    this.setState({
+                        input: event.target.innerHTML,
+                        formula: event.target.innerHTML
+                    });
+                }
+                else {
+                    this.setState({
+                        input: this.state.input + event.target.innerHTML,
+                        formula: this.state.formula + event.target.innerHTML
+                    });
+                }
                 break;
             case "six":
-                this.setState({
-                    input: this.state.input + event.target.innerHTML,
-                    formula: this.state.formula + event.target.innerHTML
-                });
+                if(this.state.input === "0"){
+                    this.setState({
+                        input: event.target.innerHTML,
+                        formula: event.target.innerHTML
+                    });
+                }
+                else {
+                    this.setState({
+                        input: this.state.input + event.target.innerHTML,
+                        formula: this.state.formula + event.target.innerHTML
+                    });
+                }
                 break;
             case "seven":
-                this.setState({
-                    input: this.state.input + event.target.innerHTML,
-                    formula: this.state.formula + event.target.innerHTML
-                });
+                if(this.state.input === "0"){
+                    this.setState({
+                        input: event.target.innerHTML,
+                        formula: event.target.innerHTML
+                    });
+                }
+                else {
+                    this.setState({
+                        input: this.state.input + event.target.innerHTML,
+                        formula: this.state.formula + event.target.innerHTML
+                    });
+                }
                 break;
             case "eight":
-                this.setState({
-                    input: this.state.input + event.target.innerHTML,
-                    formula: this.state.formula + event.target.innerHTML
-                });
+                if(this.state.input === "0"){
+                    this.setState({
+                        input: event.target.innerHTML,
+                        formula: event.target.innerHTML
+                    });
+                }
+                else {
+                    this.setState({
+                        input: this.state.input + event.target.innerHTML,
+                        formula: this.state.formula + event.target.innerHTML
+                    });
+                }
                 break;
             case "nine":
-                this.setState({
-                    input: this.state.input + event.target.innerHTML,
-                    formula: this.state.formula + event.target.innerHTML
-                });
+                if(this.state.input === "0"){
+                    this.setState({
+                        input: event.target.innerHTML,
+                        formula: event.target.innerHTML
+                    });
+                }
+                else {
+                    this.setState({
+                        input: this.state.input + event.target.innerHTML,
+                        formula: this.state.formula + event.target.innerHTML
+                    });
+                }
                 break;
             case "decimal":
                 if(this.state.decimal === false) {
@@ -142,9 +222,7 @@ class Calculator extends React.Component {
                         i=0;
                     }
                 }
-                if(this.state.decimal===true){
-                    this.state.total = this.state.total.toFixed(4);
-                }
+                
                 this.setState({
                     input: this.state.total
                 })
@@ -153,10 +231,10 @@ class Calculator extends React.Component {
             case "clear":
                 this.setState({
                     total: 0,
-                input: "",
-                formula: "",
-                calc: [],
-                decimal: false
+                    input: "0",
+                    formula: "",
+                    calc: [],
+                    decimal: false
                 });
                 break;
         }
@@ -185,9 +263,9 @@ class Calculator extends React.Component {
                         <div id="divide" onClick={this.handleClick} value="/">/</div>
                         <div id="decimal" onClick={this.handleClick} value=",">.</div>
                         <div id="clear" onClick={this.handleClick} value="AC">AC</div>
-                        <div id="display">
-                            <div id="formula">{this.state.formula}</div>
-                            <div id="input">{this.state.input}</div>
+                        <div id="display-container">
+                            <div id="output">{this.state.formula}</div>
+                            <div id="display">{this.state.input}</div>
                         </div>
                     </div>
                 </div>

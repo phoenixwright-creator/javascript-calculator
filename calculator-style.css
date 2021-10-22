@@ -1,5 +1,8 @@
-#container {
-    background-color: aqua;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+body {
+    background-color: rgb(218, 218, 191);
+    font-family: 'Orbitron', sans-serif;
 }
 
 #presentation {
@@ -7,16 +10,19 @@
     height: 50px;
     align-items: center;
     justify-content: center;
+    font-size: 40px;
+    padding-bottom: 10px;
 }
 
 #main {
     display: grid;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
 }
 
 #calculator {
-    background-color: beige;
+    background-color: rgb(192, 79, 79);
     display: grid;
     grid-template-rows: repeat(6, 75px);
     grid-template-columns: repeat(4, 75px);
@@ -27,15 +33,29 @@
         "four five six add"
         "one two three equals"
         "zero zero decimal equals";
-        border: 1px solid black;
+    border: 1px solid black;
+    box-shadow: 5px 5px;
     text-align: center;
     font-size: 18px;
 }
 
-#display {
+#display-container {
     grid-area: display;
-    display: flex;
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
     border: 1px solid black;
+}
+
+#output {
+    justify-self: end;
+    align-self: center;
+    padding-right: 10px;
+}
+
+#display {
+    justify-self: end;
+    align-self: center;
+    padding-right: 10px;
 }
 
 #equals {
