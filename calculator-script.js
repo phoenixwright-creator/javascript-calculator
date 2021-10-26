@@ -163,41 +163,70 @@ class Calculator extends React.Component {
                         decimal: true
                     });
                 }
-                else {
-                    console.log("You cannot use more than one decimal separator");
-                }
                 break;
             case "add":
-                this.state.calc.push(Number(this.state.input));
-                this.state.calc.push("+");
-                this.state.formula += "+";
+                if(this.state.input===""||this.state.input==="-"){
+                    if(this.state.calc[this.state.calc.length-1]==="+"||this.state.calc[this.state.calc.length-1]==="/"||this.state.calc[this.state.calc.length-1]==="*"){
+                        this.state.calc.pop();
+                        this.state.calc.push("+");
+                    }
+                }
+                else{
+                    this.state.calc.push(Number(this.state.input));
+                    this.state.calc.push("+");
+                    
+                }
+                this.state.formula = this.state.calc.join("");
                 this.state.input = "";
                 this.state.decimal = false;
                 break;
             case "subtract":
-                this.state.calc.push(Number(this.state.input));
-                this.state.calc.push("-");
-                this.state.formula += "-";
+                if(this.state.input===""){
+                    if(this.state.calc[this.state.calc.length-1]==="+"||this.state.calc[this.state.calc.length-1]==="/"||this.state.calc[this.state.calc.length-1]==="*"||this.state.calc[this.state.calc.length-1]==="-"){
+                        this.state.input += "-";
+                        break;
+                    }
+                }
+                else{
+                    this.state.calc.push(Number(this.state.input));
+                    this.state.calc.push("-");
+                }
+                this.state.formula = this.state.calc.join("");
                 this.state.input = "";
                 this.state.decimal = false;
                 break;
             case "multiply":
-                this.state.calc.push(Number(this.state.input));
-                this.state.calc.push("*");
-                this.state.formula += "*";
+                if(this.state.input===""||this.state.input==="-"){
+                    if(this.state.calc[this.state.calc.length-1]==="+"||this.state.calc[this.state.calc.length-1]==="/"||this.state.calc[this.state.calc.length-1]==="*"){
+                        this.state.calc.pop();
+                        this.state.calc.push("*");
+                    }
+                }
+                else{
+                    this.state.calc.push(Number(this.state.input));
+                    this.state.calc.push("*");
+                }
+                this.state.formula = this.state.calc.join("");
                 this.state.input = "";
                 this.state.decimal = false;
                 break;
             case "divide":
-                this.state.calc.push(Number(this.state.input));
-                this.state.calc.push("/");
-                this.state.formula += "/";
+                if(this.state.input===""||this.state.input==="-"){
+                    if(this.state.calc[this.state.calc.length-1]==="+"||this.state.calc[this.state.calc.length-1]==="/"||this.state.calc[this.state.calc.length-1]==="*"){
+                        this.state.calc.pop();
+                        this.state.calc.push("/");
+                    }
+                }
+                else{
+                    this.state.calc.push(Number(this.state.input));
+                    this.state.calc.push("/");
+                }
+                this.state.formula = this.state.calc.join("");
                 this.state.input = "";
                 this.state.decimal = false;
                 break;
             case "equals":
                 this.state.calc.push(Number(this.state.input));
-                console.log(this.state.calc);
                 for(let i=0; i<this.state.calc.length; i++){
                     if(this.state.calc[i]==="*"){
                         this.state.total = this.state.calc[i-1] * this.state.calc[i+1];
@@ -222,11 +251,9 @@ class Calculator extends React.Component {
                         i=0;
                     }
                 }
-                
                 this.setState({
                     input: this.state.total
-                })
-                console.log(this.state.total);
+                });
                 break;
             case "clear":
                 this.setState({
@@ -268,6 +295,7 @@ class Calculator extends React.Component {
                             <div id="display">{this.state.input}</div>
                         </div>
                     </div>
+                    <div id="author"><a href="https://github.com/phoenixwright-creator" target="_blank">Written by Phoenix Wright</a></div>
                 </div>
             </div>
         );
